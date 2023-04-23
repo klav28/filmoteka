@@ -2,17 +2,17 @@
   "name": "project-group-12",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://SMAILe3001.github.io/project-group-12",
+  "homepage": "https://klav28.github.io/filmoteka",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project-group-12/"
+    "build": "parcel build src/*.html --public-url /filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SMAILe3001/project-group-12.git"
+    "url": "git+https://github.com/klav28/filmoteka.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Ko Le <klav28@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
