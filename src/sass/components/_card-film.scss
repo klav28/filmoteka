@@ -6,11 +6,11 @@
   transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   width: 100%;
 
-  @media screen and(min-width: $table-width) {
+  @include tablett {
     width: calc((100% - 32px) / 2);
   }
 
-  @media screen and(min-width: $desktop-width) {
+  @include desktop {
     width: calc((100% - 16px * 2) / 3);
   }
 }
@@ -23,45 +23,36 @@
   object-fit: cover;
   min-width: 280px;
   border-radius: 5px;
-  @media screen and (min-width: $table-width) {
-    width: 336;
-    height: 455;
+  @include tablett {
+    width: 100%;
+    height: 455px;
   }
-  @media screen and (min-width: $desktop-width) {
-    width: 395px;
+  @include desktop {
+    width: 100%;
     height: 574px;
   }
 }
 
 .film-title {
   width: 100%;
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
   display: flex;
+  margin-top: 8px;  
+
+  @include font(500, 14px, 16px, null);
+  color: $color-primary;  
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 8px;
-  line-height: 1.33;
   hyphens: auto;
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     @include font(500, 20, 24, none);
   }
 }
 
 .film-details {
-  font-family: 'Roboto', sans-serif;
-  color: #b92f2c;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.33;
+  color: $color-active;
+  @include font(400, 12px, 14px, null);  
 
-  @media screen and (min-width: $desktop-width) {
-    @include font(500, 20, 24, none);
+  @include desktop {
+    @include font(400, 16px, 20px, null);
   }
-}
-
-.is-hidden {
-  visibility: hidden;
 }

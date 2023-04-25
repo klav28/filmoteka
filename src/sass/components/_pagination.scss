@@ -1,14 +1,14 @@
 .tui-pagination {
   height: auto !important;
   margin: 40px !important;
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     margin: 60px !important;
   }
 }
 
 .tui-pagination .tui-is-selected,
 .tui-pagination strong {
-  background-color: #b92f2c !important;
+  background-color: $color-active !important;
   border-radius: 5px;
   border: 0px !important;
   padding: 15px !important;

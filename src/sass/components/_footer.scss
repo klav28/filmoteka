@@ -10,7 +10,7 @@ footer {
   gap: 12px;
   padding: 29px;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     flex-direction: row;
     gap: 6px;
   }
@@ -22,7 +22,7 @@ footer {
 
   color: #545454;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     font-size: 16px;
   }
 }
@@ -31,7 +31,7 @@ footer {
   color: #545454;
   font-size: 14px;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     font-size: 16px;
   }
 }

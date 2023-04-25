@@ -1,8 +1,9 @@
 // переважаючі характеристики сторінки
 body {
-  color: $color-primary-dark;
-  font-family: $font-site;
-  @include font(500, 18, 22, 0.02);
+  color: $color-primary;
+  font-family: $main-font;
+  @include font(500, 18px, 22px, 0.02em);
+  background-color: $color-background;
 }
 
 // Видалення крапок списку
@@ -43,14 +44,14 @@ body {
     width: $mobile-width;
   }
 
-  @media screen and (min-width: $table-width) {
-    width: $table-width;
+  @include tablett {
+    width: $tablett-width;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 32px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
   }
 }

@@ -30,7 +30,7 @@
   align-items: center;
   justify-content: space-between;
 
-  background-color: #ffffff;
+  background-color: $color-background;
   padding-bottom: 13px;
   padding-top: 13px;
 }
@@ -302,7 +302,7 @@
 }
 
 .modal-team::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: $color-background;
 }
 
 .modal-team::-webkit-scrollbar-thumb {

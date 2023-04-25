@@ -18,12 +18,12 @@
   flex-wrap: wrap;
   gap: 20px;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     gap: 32px;
     justify-content: center;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     gap: 32px 16px;
   }
 }
@@ -89,7 +89,7 @@
   margin-top: 10px;
   line-height: 1.17;
   text-transform: uppercase;
-  color: #000000;
+  color: $color-primary;
 }
 
 .card-set__genre {

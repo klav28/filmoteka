@@ -6,40 +6,32 @@
   background-size: cover;
   border-radius: 10px;
 
-  // animation: 10s anibBegMobile infinite;
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include retina {
     background-image: url(../images/header-mobile@2x.jpg);
   }
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     height: 222px;
     padding: 16px;
     background-image: url(../images/header-tablet.jpg);
-    animation: 10s anibBegTablett infinite;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    animation: 20s headerImage_tablett infinite;
+    @include retina {
       background-image: url(../images/header-tablet@2x.jpg);
     }
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     padding: 16px 32px 32px 32px;
     height: 316px;
     background-image: url(../images/header-desktop.jpg);
-    animation: 10s anibBegDesctop infinite;
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    animation: 20s headerImage_desktop infinite;
+    @include retina {
       background-image: url(../images/header-desktop@2x.jpg);
     }
   }
 }
 
-@keyframes anibBegDesctop {
+@keyframes headerImage_desktop {
   0% {
   }
   22% {
@@ -62,7 +54,7 @@
   }
 }
 
-@keyframes anibBegTablett {
+@keyframes headerImage_tablett {
   0% {
   }
   22% {
@@ -82,29 +74,6 @@
   }
   100% {
     background-image: url(../images/header-tablet.jpg);
-  }
-}
-
-@keyframes anibBegMobile {
-  0% {
-  }
-  22% {
-    background-image: url(../images/header-mobile.jpg);
-  }
-  33% {
-    background-image: url(../images/header-mobile1.jpg);
-  }
-  55% {
-    background-image: url(../images/header-mobile1.jpg);
-  }
-  66% {
-    background-image: url(../images/header-mobile2.jpg);
-  }
-  88% {
-    background-image: url(../images/header-mobile2.jpg);
-  }
-  100% {
-    background-image: url(../images/header-mobile.jpg);
   }
 }
 
@@ -113,10 +82,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-
-  @media screen and (min-width: $table-width) {
-    gap: 8px;
-  }
 }
 
 .search {
@@ -124,11 +89,11 @@
   width: 100%;
   order: 2;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     width: 165px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     width: 187px;
   }
 }
@@ -138,25 +103,22 @@
   height: 42px;
   padding: 16px;
   padding-right: 40px;
-  background: #ffffff;
+  background: $color-background;
   border-radius: 100px;
   border: none;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     width: 165px;
   }
 
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     width: 187px;
   }
 }
 
 .search__input::placeholder {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
+  @include font(400,14px,16px,null);
+  color: $color-primary;
 }
 
 .search__btn {
@@ -174,7 +136,7 @@
   align-items: center;
   gap: 4px;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     gap: 8px;
     order: 2;
   }
@@ -184,39 +146,39 @@
   display: block;
 
   padding: 14px 24px;
-  background: #ffffff;
+  background: $color-background;
   border-radius: 100px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #000000;
+  color: $color-primary;
   text-decoration: none;
 }
 
 .menu-list__link:hover,
 .menu-list__link:focus {
   background-color: #000;
-  color: #fff;
+  color: $color-background;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-list__link--active {
   background-color: #000;
-  color: #fff;
+  color: $color-background;
 }
 
 .logo {
   margin-top: 312px;
   // margin-top: 48vh;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     margin-top: 105px;
     width: 260px;
   }
-  @media screen and (min-width: $desktop-width) {
+  @include desktop {
     margin-top: 175px;
   }
 }
@@ -232,9 +194,9 @@
   gap: 8px;
   font-weight: 500;
   font-size: 44px;
-  color: #ffffff;
+  color: $color-background;
 
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     justify-content: start;
     gap: 16px;
   }

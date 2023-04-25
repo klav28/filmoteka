@@ -1,5 +1,5 @@
 // .logo__link {
-//   @media   screen and (max-width: $table-width) {
+//   @media   screen and (max-width: $tablett-width) {
 //     margin-left: 44px;
 //   }
 // }
@@ -7,19 +7,19 @@
 .header-mylibrary__nav--logo {
   justify-content: space-between;
   align-items: baseline;
-  @media screen and (min-width: $table-width) {
+  @include tablett {
     display: flex;
   }
 }
 
 .header-mylibrary__nav {
-  @media screen and (max-width: $table-width) {
+  @media screen and (max-width: $tablett-width) {
     margin-bottom: 16px;
   }
 }
 
 .header-mylibrary__btn {
-  @media screen and (max-width: $table-width) {
+  @media screen and (max-width: $tablett-width) {
     display: flex;
     justify-content: center;
   }
@@ -27,27 +27,27 @@
 
 .library__button {
   padding: 14px 24px;
-  background: #ffffff;
+  background: $color-background;
   border-radius: 100px;
   border: none;
-  font-family: $font-site;
+  font-family: $main-font;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
-  color: #b92f2c;
+  color: $color-active;
   text-decoration: none;
 }
 
 .library__button:hover,
 .library__button:focus {
-  background-color: #b92f2c;
-  color: #fff;
+  background-color: $color-active;
+  color: $color-background;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .library__button--active {
-  background-color: #b92f2c;
-  color: #fff;
+  background-color: $color-active;
+  color: $color-background;
 }
